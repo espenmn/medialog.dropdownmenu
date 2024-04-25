@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="medialog.dropdownmenu">
+
+ <!-- -*- extra stuff goes here -*- -->
+
+  <browser:viewlet
+     name="drop-down-menu-viewlet"
+     for="plone.app.contenttypes.interfaces.IDocument"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     layer="medialog.dropdownmenu.interfaces.IMedialogDropdownmenuLayer"
+     class=".drop_down_menu_viewlet.DropDownMenuViewlet"
+     template="drop-down-menu-viewlet.pt"
+     permission="zope2.View"
+     />
+
+
+</configure>
