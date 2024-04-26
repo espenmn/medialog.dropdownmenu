@@ -16,16 +16,19 @@ class DropDownMenuViewlet(GlobalSectionsViewlet):
     def customize_tab(self, entry, tab):
         """Helper to add custom entry keys/values."""
         #Maybe add option for 'top folder too?
+        entry['extra_css_class'] = ''
         entry['image_thumb'] = ''
         
     def customize_entry(self, entry, brain):
         """Helper to add custom entry keys/values."""
         entry['image_thumb'] = ''
+        entry['extra_css_class'] = ''
         if brain.getIcon:
+            entry['extra_css_class'] = 'nav-image-item '
             entry['image_thumb'] = '<img  alt="" class="subnmenu_image" src="{url}/@@images/image/{thumb}" /> '.format( url = entry['url'], thumb = self.thumb_size() )
                
     _item_markup_template = (
-            '<li class="{id}{has_sub_class} nav-item">'
+            '<li class="{id}{has_sub_class} {extra_css_class}nav-item">'
             '<a href="{url}" class="state-{review_state} nav-link"{aria_haspopup}>{image_thumb}{title}</a>{opener}'   
             "{sub}"  
             "</li>"
