@@ -15,7 +15,6 @@
      name="plone.global_sections"
      for="*"
      manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
-    
      class=".drop_down_menu_viewlet.DropDownMenuViewlet"
      permission="zope2.View"
      />
