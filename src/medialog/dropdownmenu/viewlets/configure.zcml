@@ -5,14 +5,18 @@
     i18n_domain="medialog.dropdownmenu">
 
  <!-- -*- extra stuff goes here -*- -->
+ <!-- name="drop-down-menu-viewlet" -->
+ <!-- manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle" -->
+ <!-- template="drop-down-menu-viewlet.pt" -->
+     
+     
 
   <browser:viewlet
-     name="drop-down-menu-viewlet"
-     for="plone.app.contenttypes.interfaces.IDocument"
-     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
-     layer="medialog.dropdownmenu.interfaces.IMedialogDropdownmenuLayer"
+     name="plone.global_sections"
+     for="*"
+     manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
+    
      class=".drop_down_menu_viewlet.DropDownMenuViewlet"
-     template="drop-down-menu-viewlet.pt"
      permission="zope2.View"
      />
 
